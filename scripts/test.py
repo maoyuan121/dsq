@@ -108,7 +108,7 @@ test("Supports filtering with REGEXP", to_run, want)
 
 # Table aliases
 to_run = """./dsq ./testdata/nested/nested.json "SELECT * FROM {} u WHERE u.name REGEXP 'A.*'" """
-want = '[{location.address.number":1002,"location.city":"Toronto","name":"Agarrah"}]'
+want = '[{"location.address.number":1002,"location.city":"Toronto","name":"Agarrah"}]'
 test("Supports table aliases", to_run, want)
 
 # END OF TESTS
